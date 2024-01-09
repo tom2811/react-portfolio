@@ -1,0 +1,162 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    padding: 70px;
+    margin-top: 100px;
+    z-index: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: -5px;
+    color: var(--text-color);
+    margin-top: -40px;
+}
+
+.aboutImage {
+    height: 30%;
+    width: 30%;
+    margin: 10% 5% 0 -5%;
+    animation-name: inflate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.arrow {
+    position: fixed;
+    top: 90%;
+    right: 3%;
+    width: 40px;
+    transition: 0.5s all;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+@keyframes inflate {
+    0% {
+        transform: scale(0, 0px);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0, -0px);
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.icon1 {
+    position: absolute;
+    width: 15%;
+    top: 32%;
+    left: 42%;
+    transition: 0.3s all;
+}
+
+.icon1:hover {
+    transform: scale(1.3);
+}
+
+.icon2 {
+    position: absolute;
+    width: 13%;
+    top: 63%;
+    left: 38%;
+    transition: 0.3s all;
+}
+
+.icon2:hover {
+    transform: scale(1.3);
+}
+
+.aboutItems {
+    list-style: none;
+}
+
+.aboutItemText span {
+    color: black;
+}
+
+h3 {
+    margin-top: 20%;
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutImage {
+        width: 40%;
+    }
+
+    .icon1 {
+        top: 27%;
+        left: 57%;
+    }
+
+    .icon2 {
+        top: 57.5%;
+        left: 51%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aboutImage {
+        width: 40%;
+    }
+
+    .icon1 {
+        top: 23%;
+        left: 65%;
+    }
+
+    .icon2 {
+        top: 53%;
+        left: 56%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .aboutImage {
+        width: 80%;
+        margin: 0;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .icon1 {
+        top: 50.5%;
+        left: 62%;
+        width: 20%;
+    }
+    
+    .icon2 {
+        width: 25%;
+        top: 67%;
+        left: 43%;
+    }
+}

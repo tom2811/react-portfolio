@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Janken Pon",
+        "imageSrc": "./assets/projects/janken-pon.png",
+        "description": "Rock Paper Scissors game",
+        "skills": ["Html", "Css", "Javascript"],
+        "demo": "https://jan-ken-pon.pages.dev/",
+        "source": "https://github.com/tom2811/jan-ken-pon"
+    },
+    {
+        "title": "Pokemon Card Generator",
+        "imageSrc": "./assets/projects/pokemonCard.png",
+        "description": "A pokemon card generator built with fetch api",
+        "skills": ["Html", "Css", "Javascript"],
+        "demo": "https://pokemon-card-generator.pages.dev/",
+        "source": "https://github.com/tom2811/pokemon-card-generator"
+    }
+]

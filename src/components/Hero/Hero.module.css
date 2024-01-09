@@ -1,0 +1,147 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-top: 70px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100%;
+    text-shadow: 20px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--text-color);
+    z-index: 1;
+}
+
+.heroImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 18px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+.title {
+    font-size: 55px;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: rgba(126, 81, 14, 0.65);
+}
+
+.titleSpan {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+.typeWriterText {
+    font-family: 'Yellowtail', sans-serif;
+    font-size: 80px;
+    line-height: 15px;
+}
+
+.description {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.contactBtn {
+    text-decoration: none;
+    background-color: var(--text-color);
+    color: whitesmoke;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 25px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    transition: 0.3s all;
+}
+
+.contactBtn:hover {
+    color: var(--text-color);
+    background-color: whitesmoke;
+}
+
+@media screen and (max-width: 1024px) {
+    .heroImg {
+        width: 40%;
+    }
+
+    .titleSpan {
+        font-size: 20px;
+    }
+
+    .typeWriterText {
+        font-size: 70px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .contactBtn {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heroImg {
+        width: 50%;
+    }
+
+    .titleSpan {
+        font-size: 25px;
+    }
+
+    .typeWriterText {
+        font-size: 45px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .contactBtn {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .heroImg {
+        width: 70%;
+        top: -10%;
+        right: 12%;
+    }
+
+    .title {
+        margin-top: 150px;
+    }
+}
