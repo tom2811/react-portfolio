@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "title": "KicksKraze",
+      "description": "A sneaker e-commerce platform built with the MERN stack which allows users to browse, search, and purchase sneakers, featuring user authentication and a shopping cart.",
+      "image": "/assets/projects/kickskraze.png",
+      "techStack": [
+        "MongoDB",
+        "Express JS",
+        "React",
+        "Node JS",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "github": "https://github.com/tom2811/KicksKraze-2.0",
+      "liveDemo": "https://kickskraze.onrender.com/"
+    },
+    {
+      "title": "KicksKraze",
+      "description": "A sneaker e-commerce platform built with the MERN stack which allows users to browse, search, and purchase sneakers, featuring user authentication and a shopping cart.",
+      "image": "/assets/projects/kickskraze.png",
+      "techStack": [
+        "MongoDB",
+        "Express JS",
+        "React",
+        "Node JS",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "github": "https://github.com/tom2811/KicksKraze-2.0",
+      "liveDemo": "https://kickskraze.onrender.com/"
+    }
+  ]
+} 
