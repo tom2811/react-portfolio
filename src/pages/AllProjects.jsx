@@ -33,7 +33,7 @@ const AllProjects = ({ isDarkMode }) => {
           <div className="flex items-center">
             <TitleBadge isDarkMode={isDarkMode} title="All Projects" />
           </div>
-          <div className="flex items-center -mt-3">
+          <div className="flex items-center -mt-2">
             <a href="/" className="pixel-button">Back</a>
           </div>
         </div>
