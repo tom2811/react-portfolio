@@ -25,7 +25,7 @@ const ProjectCard = ({
 
   // Dynamic classes
   const containerClasses = isMobile || isAllProjects
-    ? "pixel-card min-h-[600px] flex flex-col justify-between" 
+    ? "pixel-card min-h-[550px] md:min-h-[750px] lg:min-h-[650px] h-[550px] md:h-[750px] lg:h-[650px] flex flex-col justify-between"
     : "h-fit";
 
   const descriptionClasses = isMobile
@@ -38,19 +38,20 @@ const ProjectCard = ({
 
   // Mobile/Tablet Layout Component
   const MobileContent = () => (
-    <>
-      <motion.h3 variants={variants} className="text-lg sm:text-xl md:text-2xl font-bold mb-6 text-gray-800 dark:text-white pixelated text-center p-6 pb-0">
+    <div className="flex flex-col h-full">
+      <motion.h3 variants={variants} className="text-lg sm:text-xl md:text-2xl font-bold mb-4 text-gray-800 dark:text-white pixelated text-center">
         {project.title}
       </motion.h3>
 
-      <motion.div variants={variants} className="w-full mb-6">
+      <motion.div variants={variants} className="w-full mb-4">
         <img src={project.image} alt={project.title} className="w-full h-auto object-contain cursor-pointer nes-pointer" />
       </motion.div>
 
-      <motion.div variants={variants} className="flex flex-col flex-grow justify-between px-4 md:px-6 pt-0">
+      <motion.div variants={variants} className="flex flex-col flex-grow">
         <p className={`${descriptionClasses} text-center`}>{project.description}</p>
-        <div>
-          <motion.div variants={variants} className={`${techStackClasses} justify-center`}>
+        
+        <div className="mt-auto">
+          <motion.div variants={variants} className={`${techStackClasses} justify-center mb-4`}>
             {project.techStack.map((tech, index) => (
               <span key={index} className="pixel-badge text-[10px] sm:text-xs md:text-sm px-2 py-1 !transition-none">
                 {tech}
@@ -69,14 +70,14 @@ const ProjectCard = ({
           </motion.div>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 
   // All Projects View
   if (isAllProjects) {
     return (
       <motion.div variants={variants} custom={variants?.custom}
-                  className="pixel-card min-h-[600px] flex flex-col justify-between">
+                  className="pixel-card h-[600px] md:h-[750px] lg:h-[650px]">
         <div className="p-6 flex flex-col h-full">
           <MobileContent />
         </div>

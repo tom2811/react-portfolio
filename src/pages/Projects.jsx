@@ -54,7 +54,7 @@ const Projects = ({ isDarkMode }) => {
                 project={projects[0]}
                 isDarkMode={isDarkMode}
                 isMobile={true}
-                noBorder={false}
+                isAllProjects={true}
               />
             </motion.div>
 

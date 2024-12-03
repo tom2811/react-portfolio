@@ -65,13 +65,6 @@ const About = ({ isDarkMode }) => {
 
   const handleTitleAnimation = () => setTitleVisible(true);
 
-  // Bio text content
-  const bioContent = [
-    "A passionate web developer with 3+ years of experience in crafting responsive and user-friendly web applications ✨",
-    "Specializing in React, Next.js, and modern frontend technologies. Experienced in building scalable applications and implementing pixel-perfect designs 🎨",
-    "Currently focused on creating intuitive user experiences and exploring the latest web technologies 🚀"
-  ];
-
   return (
     <PageSection
       ref={ref}
@@ -121,7 +114,7 @@ const About = ({ isDarkMode }) => {
                   custom={1.0}
                   className="pixelated text-sm md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4"
                 >
-                  A passionate web developer with 3+ years of experience in
+                  A self-taught web developer with 2 years of experience in
                   crafting responsive and user-friendly web applications ✨
                 </motion.p>
                 <motion.p
@@ -129,17 +122,17 @@ const About = ({ isDarkMode }) => {
                   custom={1.4}
                   className="pixelated text-sm md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4"
                 >
-                  Specializing in React, Next.js, and modern frontend
-                  technologies. Experienced in building scalable applications
-                  and implementing pixel-perfect designs 🎨
+                  Specializing in React and modern frontend technologies. 
+                  Focused on building clean, efficient applications and 
+                  implementing pixel-perfect designs 🎨
                 </motion.p>
                 <motion.p
                   variants={aboutBioTextVariants}
                   custom={1.8}
                   className="pixelated text-sm md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
                 >
-                  Currently focused on creating intuitive user experiences and
-                  exploring the latest web technologies 🚀
+                  Passionate about creating intuitive user experiences and
+                  continuously learning new web technologies 🚀
                 </motion.p>
               </motion.div>
             </motion.div>
@@ -178,7 +171,7 @@ const About = ({ isDarkMode }) => {
                   custom={1.0}
                   className="pixelated text-base md:text-lg text-gray-600 dark:text-gray-300 leading-loose mb-6"
                 >
-                  A passionate web developer with 3+ years of experience in
+                  A self-taught web developer with 2 years of experience in
                   crafting responsive and user-friendly web applications ✨
                 </motion.p>
                 <motion.p
@@ -186,17 +179,17 @@ const About = ({ isDarkMode }) => {
                   custom={1.4}
                   className="pixelated text-base md:text-lg text-gray-600 dark:text-gray-300 leading-loose mb-6"
                 >
-                  Specializing in React, Next.js, and modern frontend
-                  technologies. Experienced in building scalable applications
-                  and implementing pixel-perfect designs 🎨
+                  Specializing in React and modern frontend technologies. 
+                  Focused on building clean, efficient applications and 
+                  implementing pixel-perfect designs 🎨
                 </motion.p>
                 <motion.p
                   variants={aboutBioTextVariants}
                   custom={1.8}
                   className="pixelated text-base md:text-lg text-gray-600 dark:text-gray-300 leading-loose"
                 >
-                  Currently focused on creating intuitive user experiences and
-                  exploring the latest web technologies 🚀
+                  Passionate about creating intuitive user experiences and
+                  continuously learning new web technologies 🚀
                 </motion.p>
               </div>
             </motion.div>

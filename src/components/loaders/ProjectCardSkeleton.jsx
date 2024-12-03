@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
  */
 const ProjectCardSkeleton = () => {
   // Base styling classes
-  const containerClasses = "pixel-card min-h-[600px] flex flex-col justify-between animate-pulse p-6";
+  const containerClasses = "pixel-card min-h-[700px] flex flex-col justify-between animate-pulse p-6";
   const skeletonBgClasses = "bg-gray-200 dark:bg-gray-700";
 
   return (

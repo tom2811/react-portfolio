@@ -126,7 +126,7 @@ const Home = ({ isDarkMode }) => {
           className="text-sm md:text-lg lg:text-lg text-gray-600 dark:text-gray-300 pixelated max-w-xl mx-auto mb-0"
         >
           <span className="block text-gray-800 dark:text-white">
-            Passionate web developer driven by high-quality
+            Passionate web developer dedicated to creating high-quality
           </span>
         </motion.p>
 
@@ -144,7 +144,7 @@ const Home = ({ isDarkMode }) => {
         <motion.div
           variants={aboutBioTextVariants}
           custom={0.8}
-          className="mt-4 sm:mt-6"
+          className="mt-0 sm:mt-4"
         >
           <a href="#projects" className="pixel-button">
             Resume
