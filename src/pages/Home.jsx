@@ -125,7 +125,10 @@ const Home = ({ isDarkMode }) => {
           custom={0.4}
           className="text-sm md:text-lg lg:text-lg text-gray-600 dark:text-gray-300 pixelated max-w-xl mx-auto mb-0"
         >
-          <span className="block text-gray-800 dark:text-white">
+          <span className="block text-gray-800 dark:text-white sm:hidden">
+            Passionate web developer dedicated to creating
+          </span>
+          <span className="hidden sm:block text-gray-800 dark:text-white">
             Passionate web developer dedicated to creating high-quality
           </span>
         </motion.p>
@@ -133,9 +136,12 @@ const Home = ({ isDarkMode }) => {
         <motion.p
           variants={aboutBioTextVariants}
           custom={0.6}
-          className="text-sm md:text-lg lg:text-lg text-gray-600 dark:text-gray-300 pixelated max-w-xl mx-auto"
+          className="text-sm md:text-lg lg:text-lg text-gray-600 dark:text-gray-300 pixelated max-w-xl mx-auto mt-0"
         >
-          <span className="block text-gray-800 dark:text-white">
+          <span className="block text-gray-800 dark:text-white sm:hidden">
+            high-quality and responsive designs.
+          </span>
+          <span className="hidden sm:block text-gray-800 dark:text-white">
             and responsive designs.
           </span>
         </motion.p>
