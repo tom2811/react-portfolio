@@ -152,7 +152,11 @@ const Home = ({ isDarkMode }) => {
           custom={0.8}
           className="mt-0 sm:mt-4"
         >
-          <a href="#projects" className="pixel-button">
+          <a 
+            href="/assets/oaksoethein-webdev-resume.pdf" 
+            download="oaksoethein-webdev-resume.pdf"
+            className="pixel-button"
+          >
             Resume
           </a>
         </motion.div>
