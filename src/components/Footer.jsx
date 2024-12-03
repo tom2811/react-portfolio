@@ -7,10 +7,10 @@ import { FaFacebookF, FaInstagram, FaGithub, FaLinkedinIn } from 'react-icons/fa
  */
 const Footer = () => {
   const socialLinks = [
-    { icon: <FaFacebookF className="w-4 h-4" />, url: 'https://www.facebook.com/oak.soethein.3', label: 'Facebook' },
-    { icon: <FaInstagram className="w-4 h-4" />, url: 'https://www.instagram.com/oak_soe_thein/', label: 'Instagram' },
-    { icon: <FaLinkedinIn className="w-4 h-4" />, url: 'https://www.linkedin.com/in/oak-soe-thein-6b8b75251/', label: 'LinkedIn' },
-    { icon: <FaGithub className="w-4 h-4" />, url: 'https://github.com/oakker26', label: 'GitHub' }
+    { icon: <FaFacebookF className="w-4 h-4" />, url: 'https://www.facebook.com/godze.ezgod', label: 'Facebook' },
+    { icon: <FaInstagram className="w-4 h-4" />, url: 'https://www.instagram.com/_tommm28/', label: 'Instagram' },
+    { icon: <FaLinkedinIn className="w-4 h-4" />, url: 'https://www.linkedin.com/in/oak-soe-thein-6b70322b9/', label: 'LinkedIn' },
+    { icon: <FaGithub className="w-4 h-4" />, url: 'https://github.com/tom2811', label: 'GitHub' }
   ];
 
   const copyrightStyles = { 
