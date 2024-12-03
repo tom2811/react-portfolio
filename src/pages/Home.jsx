@@ -153,7 +153,7 @@ const Home = ({ isDarkMode }) => {
           className="mt-0 sm:mt-4"
         >
           <a 
-            href="/assets/oaksoethein-webdev-resume.pdf" 
+            href="/assets/resume/oaksoethein-webdev-resume.pdf" 
             download="oaksoethein-webdev-resume.pdf"
             className="pixel-button"
           >
