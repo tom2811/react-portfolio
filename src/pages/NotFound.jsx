@@ -15,6 +15,7 @@ const NotFound = ({ isDarkMode, setIsDarkMode }) => {
 
   useEffect(() => {
     setAssetLoaded("content");
+    setAssetLoaded("themeLoaded");
   }, []);
 
   const handleGoHome = () => {
@@ -58,7 +59,7 @@ const NotFound = ({ isDarkMode, setIsDarkMode }) => {
           <motion.div variants={itemVariants}>
             <button
               onClick={handleGoHome}
-              className="pixel-button"
+              className={`pixel-button ${isDarkMode ? 'is-warning' : ''}`}
             >
               Go Home
             </button>

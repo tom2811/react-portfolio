@@ -60,17 +60,19 @@ const Home = ({ isDarkMode }) => {
 
   // Preload background images
   useEffect(() => {
+    // Set content as loaded immediately
+    setAssetLoaded("content");
+    
+    // Theme loading
+    const prefersDark = localStorage.theme === 'dark' || 
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    setAssetLoaded("themeLoaded");
+
+    // Image preloading
     const dayImage = new Image();
     const nightImage = new Image();
-
-    dayImage.onload = () => setAssetLoaded("dayImage");
-    nightImage.onload = () => setAssetLoaded("nightImage");
-
     dayImage.src = "/assets/backgrounds/day.jpg";
     nightImage.src = "/assets/backgrounds/night.jpg";
-
-    const timer = setTimeout(() => setAssetLoaded("content"), 500);
-    return () => clearTimeout(timer);
   }, []);
 
   return (

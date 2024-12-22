@@ -1,7 +1,7 @@
 import React, { useState, Suspense, lazy, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { LoadingProvider } from './contexts/LoadingContext';
+import { LoadingProvider, useLoading } from './contexts/LoadingContext';
 
 // Core Components
 import Header from './components/Header';
@@ -20,15 +20,17 @@ const NotFound = lazy(() => import('./pages/NotFound'));
  * MainContent Component
  * Handles the main layout and routing of the application
  */
-const MainContent = ({ isDarkMode, setIsDarkMode }) => {
+const MainContent = () => {
   const location = useLocation();
   const [contentLoaded, setContentLoaded] = useState(false);
   const showFooter = ['/', '/projects'].includes(location.pathname);
+  const { isDarkMode, setIsDarkMode, resetLoading } = useLoading();
 
   useEffect(() => {
+    resetLoading();
     const timer = setTimeout(() => setContentLoaded(true), 100);
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.pathname]);
 
   return (
     <motion.div
@@ -89,48 +91,11 @@ const MainContent = ({ isDarkMode, setIsDarkMode }) => {
  * Root component handling theme and loading states
  */
 const App = () => {
-  // Theme State Management
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    const prefersDark = localStorage.theme === 'dark' || 
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    
-    if (prefersDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    
-    return prefersDark;
-  });
-
-  // Loading State Management
-  const [isLoading, setIsLoading] = useState(true);
-  const [minLoadingTimeComplete, setMinLoadingTimeComplete] = useState(false);
-
-  // Theme Effect
-  useEffect(() => {
-    const theme = isDarkMode ? 'dark' : 'light';
-    document.documentElement.classList.toggle('dark', isDarkMode);
-    localStorage.theme = theme;
-  }, [isDarkMode]);
-
-  // Loading Timer Effect
-  useEffect(() => {
-    const timer = setTimeout(() => setMinLoadingTimeComplete(true), 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <LoadingProvider>
       <Router>
-        <Loading 
-          isDarkMode={isDarkMode} 
-          minLoadingTimeComplete={minLoadingTimeComplete}
-        />
-        <MainContent 
-          isDarkMode={isDarkMode} 
-          setIsDarkMode={setIsDarkMode} 
-        />
+        <Loading />
+        <MainContent />
       </Router>
     </LoadingProvider>
   );

@@ -17,6 +17,7 @@ const AllProjects = ({ isDarkMode }) => {
 
   useEffect(() => {
     setAssetLoaded("content");
+    setAssetLoaded("themeLoaded");
   }, []);
 
   return (
